@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --progress --watch",
-    "serve": "webpack-dev-server --open"
+    "serve": "webpack-dev-server --open",
+    "gh-pages": "git add dist && git commit -m 'Initial dist subtree commit' && git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
