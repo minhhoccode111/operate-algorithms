@@ -14,12 +14,10 @@ import './css/piece-travails/header.css';
 import './css/piece-travails/main.css';
 
 //
-// import Knight from './media/img/knight.svg';
+import Knight from './media/img/knight.svg';
 
-// const body = document.querySelector('body');
-// const div = document.createElement('div');
-// body.appendChild(div);
+const body = document.querySelector('body');
 
-// const myImage = new Image();
-// myImage.src = Knight;
-// div.appendChild(myImage);
+const myImage = new Image();
+myImage.src = Knight;
+body.appendChild(myImage); //  success

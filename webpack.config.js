@@ -1,12 +1,27 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: '.src/index.js',
+  entry: {
+    index: './src/index.js',
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Operate Algorithms',
+    }),
+  ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
-    // publicPath: 'dist',
+    filename: '[name].bundle.js',
+    clean: true,
+  },
+  optimization: {
+    runtimeChunk: 'single',
   },
   module: {
     rules: [
